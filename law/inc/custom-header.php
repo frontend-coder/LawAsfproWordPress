@@ -14,27 +14,27 @@
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses law_header_style()
+ * @uses lawasf_header_style()
  */
-function law_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'law_custom_header_args', array(
+function lawasf_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'lawasf_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'law_header_style',
+		'wp-head-callback'       => 'lawasf_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'law_custom_header_setup' );
+add_action( 'after_setup_theme', 'lawasf_custom_header_setup' );
 
-if ( ! function_exists( 'law_header_style' ) ) :
+if ( ! function_exists( 'lawasf_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see law_custom_header_setup().
+	 * @see lawasf_custom_header_setup().
 	 */
-	function law_header_style() {
+	function lawasf_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*

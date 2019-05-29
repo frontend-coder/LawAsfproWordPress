@@ -10,49 +10,134 @@
  */
 
 ?>
-<!doctype html>
+<!DOCTYPE HTML>
 <html <?php language_attributes(); ?>>
-<head>
+	<head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Law &mdash; Free Website Template, Free HTML5 Template by freehtml5.co</title>
+<?php
+$favicon_site = get_field('favicon_site');
+ if ($favicon_site) :
+$favicon_site_url = $favicon_site['url'];
+?>
+	<link rel="shortcut icon" href="<?php echo esc_url($favicon_site_url);?>" type="image/x-icon">
+<?php endif; ?>
+
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<meta name="description" content="Free HTML5 Website Template by FreeHTML5.co" />
+	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="FreeHTML5.co" />
 
-	<?php wp_head(); ?>
-</head>
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+<!--
 
-<body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'law' ); ?></a>
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$law_description = get_bloginfo( 'description', 'display' );
-			if ( $law_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $law_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+	<link rel="stylesheet" href="css/animate.css">
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'law' ); ?></button>
-			<?php
+	<link rel="stylesheet" href="css/icomoon.css">
+
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+	<link rel="stylesheet" href="css/flexslider.css">
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="js/modernizr-2.6.2.min.js"></script> -->
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+<?php wp_head(); ?>
+	</head>
+	<body <?php body_class(); ?>>
+
+<!-- 	<div class="fh5co-loader"></div> -->
+
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<div class="top-menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-2">
+<!-- //<?php lawasf_debug(); ?> -->
+<?php if(get_field('logotip_site')) :?>
+<div id="fh5co-logo"><a href="<?php echo home_url('/'); ?>">
+	<?php the_field('logotip_site');?><span>.</span></a></div>
+<?php endif; ?>
+					</div>
+					<div class="col-xs-10 text-right menu-1">
+		<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
 				'menu_id'        => 'primary-menu',
 			) );
 			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+
+					<!-- 	<ul>
+							<li class="active"><a href="index.html">Home</a></li>
+							<li><a href="practice.html">Practice Areas</a></li>
+							<li><a href="won.html">Won Cases</a></li>
+							<li class="has-dropdown">
+								<a href="blog.html">Blog</a>
+								<ul class="dropdown">
+									<li><a href="#">Web Design</a></li>
+									<li><a href="#">eCommerce</a></li>
+									<li><a href="#">Branding</a></li>
+									<li><a href="#">API</a></li>
+								</ul>
+							</li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="contact.html">Contact</a></li>
+							<li class="btn-cta"><a href="#"><span>Login</span></a></li>
+							<li class="btn-cta"><a href="#"><span>Sign Up</span></a></li>
+						</ul>
+ -->
+
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

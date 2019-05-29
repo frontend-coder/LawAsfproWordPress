@@ -22,21 +22,21 @@
 			?>
 			<div class="entry-meta">
 				<?php
-				law_posted_on();
-				law_posted_by();
+				lawasf_posted_on();
+				lawasf_posted_by();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php law_post_thumbnail(); ?>
+	<?php lawasf_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
 		the_content( sprintf(
 			wp_kses(
 				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'law' ),
+				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'lawasf' ),
 				array(
 					'span' => array(
 						'class' => array(),
@@ -47,13 +47,13 @@
 		) );
 
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'law' ),
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'lawasf' ),
 			'after'  => '</div>',
 		) );
 		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php law_entry_footer(); ?>
+		<?php lawasf_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
