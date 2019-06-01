@@ -17,7 +17,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Law &mdash; Free Website Template, Free HTML5 Template by freehtml5.co</title>
 <?php
-$favicon_site = get_field('favicon_site');
+$favicon_site = get_field('favicon_site', 'option');
  if ($favicon_site) :
 $favicon_site_url = $favicon_site['url'];
 ?>
@@ -77,9 +77,10 @@ $favicon_site_url = $favicon_site['url'];
 				<div class="row">
 					<div class="col-xs-2">
 <!-- //<?php lawasf_debug(); ?> -->
-<?php if(get_field('logotip_site')) :?>
+<?php if(get_field('all_logotip_site', 'option')) :?>
 <div id="fh5co-logo"><a href="<?php echo home_url('/'); ?>">
-	<?php the_field('logotip_site');?><span>.</span></a></div>
+	<?php $uiuii = the_field('all_logotip_site', 'option'); echo $uiuii; ?>
+	<span>.</span></a></div>
 <?php endif; ?>
 					</div>
 					<div class="col-xs-10 text-right menu-1">
