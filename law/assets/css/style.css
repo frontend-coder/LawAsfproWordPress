@@ -1059,6 +1059,28 @@ height: auto;
   margin: 0;
   list-style: none;
 }
+#fh5co-footer .widget ul,
+#fh5co-footer .fh5co-widget .widget_nav_menu,
+#fh5co-footer .widget_nav_menu ul {
+padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+
+.menu .menu-item a {
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+}
+
+.widget_nav_menu {
+  padding: 0;
+  margin: 0;
+}
+.widget_categories ul {
+padding: 0;
+padding-left: 0;
+}
 #fh5co-footer .fh5co-footer-links li a {
   color: rgba(0, 0, 0, 0.5);
   text-decoration: none;

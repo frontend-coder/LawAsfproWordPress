@@ -15,7 +15,7 @@ get_header();
 <?php // get the current taxonomy term
 $term = get_queried_object();
 // vars
-$image = get_field('category_pic_category', $term);
+$image = get_field('category_pic_tags', $term);
 ?>
 
 				<li style="background-image: url(<?php echo $image['url']; ?>);">
@@ -25,7 +25,7 @@ $image = get_field('category_pic_category', $term);
 							<div class="slider-text-inner desc">
 								<h2 class="heading-section">
 									<?php
-									if( is_category() )
+									if( is_tag() )
 										echo get_queried_object()->name;
 									?>
 								</h2>

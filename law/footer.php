@@ -14,40 +14,79 @@
 <footer id="fh5co-footer" role="contentinfo">
 	<div class="container">
 		<div class="row row-pb-md">
+
+
+
 			<div class="col-md-3 fh5co-widget">
+<?php if ( !is_active_sidebar( 'widgeting-footer-1' ) )
+                    { echo "Активируйте виджеты"; }
+                    else {
+                    	dynamic_sidebar( 'widgeting-footer-1' );
+                    }
+                     ?>
+
+<!--
 				<h4>Attorney's Law</h4>
 				<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
+ -->
 			</div>
+
 			<div class="col-md-3 col-md-push-1">
-				<h4>Navigation</h4>
+
+<?php if ( !is_active_sidebar( 'widgeting-footer-2' ) )
+                    { echo "Активируйте виджеты"; }
+                    else {
+                    	dynamic_sidebar( 'widgeting-footer-2' );
+                    }
+                     ?>
+
+ 	<!-- 		<h4>Navigation</h4>
 				<ul class="fh5co-footer-links">
 					<li><a href="#">Home</a></li>
 					<li><a href="#">Practice Areas</a></li>
 					<li><a href="#">Won Cases</a></li>
 					<li><a href="#">Blog</a></li>
 					<li><a href="#">About us</a></li>
-				</ul>
+				</ul> -->
+
+
 			</div>
 
+
+
+
+
 			<div class="col-md-3 col-md-push-1">
-				<h4>Contact Information</h4>
+
+<?php if ( !is_active_sidebar( 'widgeting-footer-3' ) )
+                    { echo "Активируйте виджеты"; }
+                    else {
+                    	dynamic_sidebar( 'widgeting-footer-3' );
+                    }
+                     ?>
+	<!-- 			<h4>Contact Information</h4>
 				<ul class="fh5co-footer-links">
 					<li>198 West 21th Street, <br> Suite 721 New York NY 10016</li>
 					<li><a href="tel://1234567920">+ 1235 2355 98</a></li>
 					<li><a href="mailto:info@yoursite.com">info@yoursite.com</a></li>
 					<li><a href="http://gettemplates.co">gettemplates.co</a></li>
-				</ul>
+				</ul> -->
 			</div>
 
 			<div class="col-md-3 col-md-push-1">
-				<h4>Opening Hours</h4>
+<?php if ( !is_active_sidebar( 'widgeting-footer-4' ) )
+                    { echo "Активируйте виджеты"; }
+                    else {
+                    	dynamic_sidebar( 'widgeting-footer-4' );
+                    }
+                     ?>
+	<!-- 			<h4>Opening Hours</h4>
 				<ul class="fh5co-footer-links">
 					<li>Mon - Thu: 9:00 - 21 00</li>
 					<li>Fri 8:00 - 21 00</li>
 					<li>Sat 9:30 - 15: 00</li>
-				</ul>
+				</ul> -->
 			</div>
-
 		</div>
 
 		<div class="row copyright">
@@ -107,31 +146,3 @@
 	<?php wp_footer(); ?>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

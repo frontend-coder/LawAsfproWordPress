@@ -1,6 +1,4 @@
 <?php
-
-
 // регистрация дргугого типа записи - практика
 add_action('init', 'register_post_types');
 function register_post_types(){
@@ -49,28 +47,6 @@ function register_post_types(){
 		'query_var'           => true,
 	) );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // регистрация дргугого типа записи - Counseling
 add_action('init', 'register_post_types1');

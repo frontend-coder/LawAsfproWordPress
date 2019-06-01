@@ -100,9 +100,6 @@ function lawasf_content_width() {
 add_action( 'after_setup_theme', 'lawasf_content_width', 0 );
 
 
-include ( get_template_directory() . '/functions/including-widget.php' );
-include ( get_template_directory() . '/functions/including-style.php' );
-
 /**
  * Implement the Custom Header feature.
  */
@@ -130,13 +127,24 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-//  include ( get_template_directory() . '/inc/custom-types-sites.php' );
-
-include ( get_template_directory() . '/functions/custom-thamb.php' );
-include ( get_template_directory() . '/functions/custom-type.php' );
-include ( get_template_directory() . '/functions/function-pagination.php' );
-include ( get_template_directory() . '/functions/asf-options.php' );
+require  get_template_directory() . '/functions/including-widget.php' ;
+require  get_template_directory() . '/functions/including-style.php';
+require  get_template_directory() . '/functions/custom-thamb.php' ;
+require get_template_directory() . '/functions/custom-type.php' ;
+require  get_template_directory() . '/functions/function-pagination.php';
+require  get_template_directory() . '/functions/asf-options.php' ;
 
 function lawasf_debug($data) {
 	echo '<pre>' . print_r ($data, 1) . '</pre>';
 }
+
+
+
+
+
+
+
+
+
+
+?>

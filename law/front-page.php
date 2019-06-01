@@ -1,8 +1,7 @@
 <?php
-/*
+/**
 Template Name: main-page-tamplate
-Template Post Type: post, page
-*/
+**/
 ?>
 <?php
 get_header();

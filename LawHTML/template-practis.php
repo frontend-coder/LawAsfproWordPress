@@ -12,13 +12,14 @@ get_header();
 	<div class="flexslider js-fullheight">
 
 		<ul class="slides">
-<?php // get the current taxonomy term
-$term = get_queried_object();
-// vars
-$image = get_field('category_pic_category', $term);
-?>
 
-				<li style="background-image: url(<?php echo $image['url']; ?>);">
+			<?php
+			$category_pic_category =  'http://law-asf.local/wp-content/uploads/2019/05/27017-nature-is-this-real-1.jpg';
+//get_field('category_pic_category');
+			if(!empty($category_pic_category)): ?>
+
+
+				<li style="background-image: url(<?php echo $category_pic_category; ?>);">
 					<div class="overlay-gradient"></div>
 					<div class="container">
 						<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
@@ -61,7 +62,7 @@ if(!empty($category_description)) {
 </div>
 </div>
 </li>
-
+<?php endif; ?>
 
 </ul>
 
@@ -82,7 +83,7 @@ if(!empty($category_description)) {
 						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 							<?php the_post_thumbnail('mainpage-thamb', array('class' => 'gtrimg-responsive') ); ?>
 
-							<!-- <img class="img-responsive" src="images/project-6.jpg" alt=""> -->
+							<img class="img-responsive" src="images/project-6.jpg" alt="">
 
 						</a>
 						<div class="blog-text">
