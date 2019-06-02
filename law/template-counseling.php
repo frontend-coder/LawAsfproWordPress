@@ -63,7 +63,7 @@ if ( $loop->have_posts() ) {
 
 				<div class="col-lg-4 col-md-4">
 					<div class="fh5co-blog animate-box">
-						<a href="#" title="rtgtrd">
+						<a href="<?php the_permalink(); ?>" title="rtgtrd">
 					<?php if (has_post_thumbnail($post-> ID)) : ?>
 										<?= get_the_post_thumbnail($post-> ID, 'counseling-thumb', array('class' => 'img-responsive') ); ?>
 		<!-- <img class="img-responsive" src="images/project-6.jpg" alt=""> -->
@@ -73,13 +73,13 @@ if ( $loop->have_posts() ) {
 						<div class="blog-text">
 							<span class="posted_on"><?php the_time('M. j'); ?></span>
 							<span class="comment"><a href="<?php the_permalink() ?>#comments"><?php comments_number('0', '1', '%'); ?> <i class="icon-speech-bubble"></i></a></span>
-							<h3><a href="#"><?= $post->post_title ?></a></h3>
+							<h3><a href="<?php the_permalink(); ?>"><?= $post->post_title ?></a></h3>
 							<p><?php
 $content = get_the_excerpt();// или get_the_content()
 $trimmed_content = wp_trim_words( $content, 10, '' );
 echo $trimmed_content;
 ?></p>
-							<a href="#" class="btn btn-primary">Read More</a>
+							<a href="<?php the_permalink(); ?>" class="btn btn-primary">Read More</a>
 						</div>
 					</div>
 				</div>

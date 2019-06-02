@@ -37,12 +37,13 @@ function register_post_types(){
 		'hierarchical'        => false,
 		'supports'            => array('title','editor','thumbnail','excerpt' ), // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
 		'taxonomies'          => array(),
+	//	'taxonomies'          => array('category','post_tag'),
 		'has_archive'         => false,
-		'rewrite'             => array(
-			'slug'=>'deal-practis',
-			'hierarchical'=>false,
-			'with_front'=>false,
-			'feed'=>false ),
+		// 'rewrite'             => array(
+		// 	'slug'=>'deal-practis',
+		// 	'hierarchical'=>false,
+		// 	'with_front'=>false,
+		// 	'feed'=>false ),
 
 		'query_var'           => true,
 	) );
@@ -86,14 +87,14 @@ function register_post_types1(){
 		'hierarchical'        => false,
 		'supports'            => array(
 		'title',
-	//	'editor',
+	'editor',
 		'thumbnail',
 	//	'excerpt'
 		 ),
 		'taxonomies'          => array(),
 		'has_archive'         => false,
 		'rewrite'             => array(
-			'slug'=>'deal-practis',
+			'slug'=>'deal-counseling',
 			'hierarchical'=>false,
 			'with_front'=>false,
 			'feed'=>false ),
@@ -141,14 +142,14 @@ function register_post_types2(){
 		'hierarchical'        => false,
 		'supports'            => array(
 		'title',
-	//	'editor',
+		'editor',
 		'thumbnail',
 		'excerpt'
 		 ),
 		'taxonomies'          => array(),
 		'has_archive'         => false,
 		'rewrite'             => array(
-			'slug'=>'deal-practis',
+			'slug'=>'deal-testimonials',
 			'hierarchical'=>false,
 			'with_front'=>false,
 			'feed'=>false ),
@@ -157,7 +158,7 @@ function register_post_types2(){
 	) );
 }
 
-// регистрация дргугого типа записи - Testimonials
+// регистрация дргугого типа записи - attorneys
 add_action('init', 'register_post_types3');
 function register_post_types3(){
 	register_post_type('attorneys', array(
@@ -195,14 +196,14 @@ function register_post_types3(){
 		'hierarchical'        => false,
 		'supports'            => array(
 		'title',
-	//	'editor',
+	'editor',
 		'thumbnail',
 		'excerpt'
 		 ),
 		'taxonomies'          => array(),
 		'has_archive'         => false,
 		'rewrite'             => array(
-			'slug'=>'deal-practis',
+			'slug'=>'deal-attorneys',
 			'hierarchical'=>false,
 			'with_front'=>false,
 			'feed'=>false ),

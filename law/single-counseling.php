@@ -40,34 +40,26 @@ echo $trimmed_content;
 
 
 
-	<div id="fh5co-testimonial" class="fh5co-bg-section">
+	<!-- <div id="fh5co-testimonial" class="fh5co-bg-section">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1">
-
 					<div class="row animate-box">
-
 	<div class="testimony-single active text-center">
 	<!-- 								<figure>
 										<img src="images/user-1.jpg" alt="user">
 									</figure> -->
+									<!--
 <?php the_content(); ?>
-
-								</div>
-
-
-
-
+							</div>
 					</div>
-
-
-
-
-
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
+
+
+
 <?php endwhile; // end while ?>
 <?php endif; // end if       ?>
 
