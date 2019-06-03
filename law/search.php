@@ -12,49 +12,21 @@ get_header();
 	<div class="flexslider js-fullheight">
 
 		<ul class="slides">
-
-			<?php
-			$category_pic_category =  'http://law-asf.local/wp-content/uploads/2019/05/27017-nature-is-this-real-1.jpg';
-//get_field('category_pic_category');
-			if(!empty($category_pic_category)): ?>
-
-
-				<li style="background-image: url(<?php echo $category_pic_category; ?>);">
+<?php if(get_field('fon_page_search', 'option')): ?>
+				<li style="background-image: url(<?php $error_pic = get_field('fon_page_search', 'option'); echo $error_pic[url]; ?>);">
+<?php endif; ?>
 					<div class="overlay-gradient"></div>
 					<div class="container">
 						<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
 							<div class="slider-text-inner desc">
+					<?php if(get_field('name_page_search', 'option')): ?>
 								<h2 class="heading-section">
-									<?php
-									if( is_category() )
-										echo get_queried_object()->name;
-									?>
+									<?php the_field('name_page_search', 'option');?>
 								</h2>
-								<?php
-								if ( $cat_desc = category_description() )
-									echo '<div class="fh5co-lead">'. $cat_desc .'</div>';
-								else
-									echo '<div class="fh5co-lead">Описание отсутствует!</div>';
-
-								?>
-
-
-<!-- <?php
-$category_description = category_description();
-$category_description_zero = 'Это описание пустой рубрики';
- if (is_category()) {
-if(!empty($category_description)) {
-      echo '<div class="fh5co-lead">' . $category_description . '</div>';
- } else
- echo '<div class="fh5co-lead">' . $category_description_zero . '</div>';
-
- }
- ?> -->
-
-
-
-
-
+<?php endif; ?>
+	<?php if(get_field('descr_page_search', 'option')): ?>
+<div class="fh5co-lead"> <?php the_field('descr_page_search', 'option');?>       </div>
+<?php endif; ?>
 
 
 
@@ -62,7 +34,6 @@ if(!empty($category_description)) {
 </div>
 </div>
 </li>
-<?php endif; ?>
 
 </ul>
 

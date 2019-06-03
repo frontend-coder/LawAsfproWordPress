@@ -430,28 +430,28 @@ wp_reset_postdata();  ?>
 </div>
 </div>
 
-<?php if(get_field('legal_advice_fon')): ?>
+<?php if(get_field('legal_advice_fon', 'option')): ?>
 	<div id="fh5co-started" style="background-image:url(<?php
-		$legal_advice_fon =  the_field('legal_advice_fon'); echo $legal_advice_fon[url]; ?>);">
+		$legal_advice_fon =  the_field('legal_advice_fon', 'option'); echo $legal_advice_fon[url]; ?>);">
 	<?php endif; ?>
 	<div class="overlay"></div>
 	<div class="container">
 		<div class="row animate-box">
 			<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-				<?php if(get_field("legal_advice_title")): ?>
-					<h2><?php the_field("legal_advice_title");?></h2>
+				<?php if(get_field('legal_advice_title', 'option')): ?>
+					<h2><?php the_field('legal_advice_title', 'option');?></h2>
 				<?php endif; ?>
-				<?php if(get_field("legal_advice_descr")): ?>
-					<p><?php the_field("legal_advice_descr");?></p>
+				<?php if(get_field('legal_advice_descr', 'option')): ?>
+					<p><?php the_field('legal_advice_descr', 'option');?></p>
 				<?php endif; ?>
 			</div>
 		</div>
 		<div class="row animate-box">
 			<div class="col-md-8 col-md-offset-2 text-center">
 
-				<?php if(get_field("legal_advice_link")): ?>
+				<?php if(get_field('legal_advice_link', 'option')): ?>
 
-					<p><a href="<?php the_field("legal_advice_link");?>" class="btn btn-default btn-lg">Consultation</a></p>
+					<p><a href="<?php the_field('legal_advice_link', 'option');?>" class="btn btn-default btn-lg">Consultation</a></p>
 				<?php endif; ?>
 
 			</div>

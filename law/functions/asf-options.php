@@ -21,6 +21,22 @@ if( function_exists('acf_add_options_page') ) {
 		'menu_title'	=> 'Подвал',
 		'parent_slug'	=> 'theme-general-settings',
 	));
+
+acf_add_options_sub_page(array(
+		'page_title' 	=> 'Настройка блока на страницу',
+		'menu_title'	=> 'Сквозной блок',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+acf_add_options_sub_page(array(
+		'page_title' 	=> 'Настройка блоков для страницы 404',
+		'menu_title'	=> '404 страница',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+acf_add_options_sub_page(array(
+		'page_title' 	=> 'Настройка блоков для страницы поиска',
+		'menu_title'	=> 'Страница поиска',
+		'parent_slug'	=> 'theme-general-settings',
+	));
 }
 
 ?>
